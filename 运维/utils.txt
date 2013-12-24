@@ -1,0 +1,5 @@
+crontab任务
+1.同步系统时间
+*/5 * * * *  /usr/sbin/ntpdate ntp0.cs.mu.OZ.AU > /dev/null 2>&1
+2.备份数据库
+00 03 * * * /data/sh/New_db_backup.sh

@@ -1,0 +1,1 @@
+/usr/local/nginx/sbin/nginx -t && kill -HUP `cat /usr/local/nginx/logs/nginx.pid`

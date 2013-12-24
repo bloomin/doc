@@ -1,0 +1,3 @@
+#!/bin/sh
+
+/usr/local/mysql5.5/bin/mysql -S/tmp/mysql3306.sock -uroot -p`cat /data/save/mysql_root`

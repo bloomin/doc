@@ -1,0 +1,1 @@
+mysql -uroot -p`cat /data/save/mysql_root` -e 'SHOW processlist;' 

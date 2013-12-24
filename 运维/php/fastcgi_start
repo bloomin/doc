@@ -1,0 +1,2 @@
+ulimit -SHn 65535
+/usr/local/php/sbin/php-fpm start

@@ -1,0 +1,60 @@
+#!/bin/sh
+
+mysql_port=3307
+mysql_username="root"
+mysql_password="Tom#Je&l"
+
+function_start_mysql()
+{
+    printf "Starting Infobright...\n"
+    cd /usr/local/infobright/ && /bin/sh ./bin/mysqld_safe --defaults-file=/data1/data/infobright/my.cnf --user=root &
+}
+
+function_stop_mysql()
+{
+    printf "Stoping MySQL...\n"
+    cd /usr/local/infobright/ && ./bin/mysqladmin -uroot -p${mysql_password} -S /tmp/mysql3307.sock --user=root shutdown
+}
+
+function_restart_mysql()
+{
+    printf "Restarting MySQL...\n"
+    function_stop_mysql
+    sleep 5
+    function_start_mysql
+}
+
+function_in_mysql()
+{
+   /usr/local/infobright/bin/mysql --defaults-file=/data1/data/infobright/my.cnf -uroot -p${mysql_password} -S/tmp/mysql3307.sock
+}
+
+function_processlist_mysql()
+{
+   /usr/local/infobright/bin/mysql -uroot -p${mysql_password} -S /tmp/mysql3307.sock -e "SHOW processlist;"
+}
+
+
+function_kill_mysql()
+{
+    kill -9 $(ps -ef | grep 'bin/mysqld_safe' | grep ${mysql_port} | awk '{printf $2}')
+    kill -9 $(ps -ef | grep 'libexec/mysqld' | grep ${mysql_port} | awk '{printf $2}')
+}
+
+if [ "$1" = "start" ]; then
+    function_start_mysql
+elif [ "$1" = "stop" ]; then
+    function_stop_mysql
+elif [ "$1" = "restart" ]; then
+function_restart_mysql
+elif [ "$1" = "kill" ]; then
+function_kill_mysql
+elif [ "$1" = "in" ]; then
+function_in_mysql
+elif [ "$1" = "processlist" ]; then
+function_processlist_mysql
+else
+    printf "Usage: /root/infobright {start|stop|restart|kill|in|processlist}\n"
+fi
+
+             
