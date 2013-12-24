@@ -1,0 +1,2 @@
+pecl install channel channel://pecl.php.net/ZendOpcache-7.0.2
+安装opcache扩展
