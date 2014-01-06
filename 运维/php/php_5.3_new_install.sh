@@ -45,8 +45,8 @@ if [ ! -f APC-3.1.9.tgz ];then wget http://pecl.php.net/get/APC-3.1.9.tgz;fi
 if [ ! -f memcache-2.2.7.tgz ];then wget -c http://pecl.php.net/get/memcache-2.2.7.tgz;fi
 if [ ! -f memcached-1.0.2.tgz ];then wget -c http://pecl.php.net/get/memcached-1.0.2.tgz;fi
 if [ ! -f libevent-0.0.5.tgz ];then wget -c http://pecl.php.net/get/libevent-0.0.5.tgz;fi
-if [ ! -f nicolasff-phpredis-2.1.3-167-ga5e53f1.tar.gz ];then wget -c wget http://113.107.160.154/nicolasff-phpredis-2.1.3-167-ga5e53f1.tar.gz;fi
-if [ ! -f php5327.ini ];then wget -c http://113.107.160.154/php5327.ini;fi
+if [ ! -f nicolasff-phpredis-2.1.3-167-ga5e53f1.tar.gz ];then wget -c wget http://#/nicolasff-phpredis-2.1.3-167-ga5e53f1.tar.gz;fi
+if [ ! -f php5327.ini ];then wget -c http://#/php5327.ini;fi
 }
 
 
