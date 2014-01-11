@@ -1,3 +1,6 @@
-游戏服务端
+游戏服务端框架
 https://github.com/ScutGame/Scut
 https://github.com/NetEase/pomelo
+
+邮件EDM平台
+http://sendcloud.sohu.com/  搜狐的
