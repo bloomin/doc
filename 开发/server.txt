@@ -4,3 +4,11 @@ https://github.com/NetEase/pomelo
 
 邮件EDM平台
 http://sendcloud.sohu.com/  搜狐的
+
+有趣的js类库
+自动提示在线离线状态：https://github.com/hubspot/offline
+检测设备：https://github.com/matthewhudson/device.js
+更好的网页颜色：http://clrs.cc/
+
+在线作图工具->流程图等等
+http://www.processon.com/
